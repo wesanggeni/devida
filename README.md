@@ -5,7 +5,11 @@ SA - v0.01
 Devida is repository of SA Project, future of Artifical Inteligent
 SA is Agent of Setanalas
 
-![SA](/SA.png)
+# routes
+
+![SA](/images/SA.png)
+
+# requirements
 
 Requirement
 Python 3
