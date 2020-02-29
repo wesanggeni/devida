@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://www.binance.com/userCenter/createApi.html?id=da9c18708d6e4f5fadd7ee48219c3750 -->
+<html ng-app="bnbApp" ng-controller="globalTranslateCtrl" class="ng-scope" style="height: 100%;"><link type="text/css" id="dark-mode" rel="stylesheet" href="https://www.binance.com/userCenter/createApi.html?id=da9c18708d6e4f5fadd7ee48219c3750"><style type="text/css" id="dark-mode-custom-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta name="description" ng-bind="webdescription" class="ng-binding"></meta>
+    <title ng-bind="webtitle+&#39; | &#39;+(&#39;binancetitle&#39;| T)" class="ng-binding">API Setting | Binance.com</title>
+    <link rel="stylesheet" type="text/css" href="./API Setting _ Binance.com_files/global.css">
+    <link rel="Shortcut Icon" href="https://bin.bnbstatic.com/resources/img/favicon.ico">
+    <!--  添加部分-->
+    <link rel="apple-touch-icon" href="https://bin.bnbstatic.com/resources/img/binance_icon.png">
+    <meta name="renderer" content="webkit">
+    <!--  添加结束-->
+    <script async="" src="./API Setting _ Binance.com_files/sensorsdatasdk.min.js"></script><script async="" src="./API Setting _ Binance.com_files/sensorsdatasdk.min.js"></script><script id="loadeden" src="./API Setting _ Binance.com_files/en.js"></script>
+    <script type="text/javascript">
+      var serverTime=1582900063960
+      window.path = 'https://bin.bnbstatic.com';
+    </script>
+    <script src="./API Setting _ Binance.com_files/wfp.umd.js"></script>
+    
+
+    <script src="./API Setting _ Binance.com_files/layout.min.js" type="text/javascript" charset="utf-8"></script><link rel="stylesheet" href="./API Setting _ Binance.com_files/layer.css" id="layui_layer_skinlayercss" style="">
+
+    <script>
+      layer.config({
+        extend: ["skin/myskin/myLayer.css"],
+        shift: null,
+        closeBtn: 1
+      });
+      $(document).ajaxSend(function(event, jqxhr, settings) {
+        jqxhr.setRequestHeader("clientType", "web");
+        jqxhr.setRequestHeader("lang", localStorage.lang);
+        if ($.cookie("cr00")) {
+          jqxhr.setRequestHeader("cr00", $.md5($.cookie("cr00")));
+          jqxhr.setRequestHeader("csrftoken", $.md5($.cookie("cr00")));
+        }
+        var email = $.cookie("deviceEmail");
+        if (typeof bnbDeviceInfo !== "undefined" && email) {
+          var device_info = bnbDeviceInfo.getInfo(email);
+          if (device_info) {
+            jqxhr.setRequestHeader("device_info", device_info);
+          }
+        }
+      });
+    </script><link rel="stylesheet" href="./API Setting _ Binance.com_files/myLayer.css" id="layui_layer_skinmyskinmyLayercss" style="">
+  <style data-styled="" data-styled-version="4.3.2"></style><link type="text/css" rel="stylesheet" charset="UTF-8" href="./API Setting _ Binance.com_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./API Setting _ Binance.com_files/main.js"></script><script type="text/javascript" charset="UTF-8" src="./API Setting _ Binance.com_files/element_main.js"></script></head>
+  <body style="position: relative; min-height: 100%; top: 0px;" cz-shortcut-listen="true">
+       
+<script>
+  var initLang='en'
+	var notChinese=true
+	window.path = 'https://bin.bnbstatic.com';
+
+  function setCookie(name,value)
+  {
+   var Days = 3000;
+   var exp = new Date();
+   exp.setTime(exp.getTime() + Days*24*60*60*1000);
+   document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+  }
+  if(document.cookie.indexOf("lang")==-1) {
+   localStorage.lang = initLang
+   setCookie('lang',initLang)
+  }
+</script>
+<script type="text/javascript" src="./API Setting _ Binance.com_files/langs.js"></script>
+<script id="loadeden" src="./API Setting _ Binance.com_files/en(1).js"></script>
+<script type="text/javascript" src="./API Setting _ Binance.com_files/head.js"></script>
+<script src="./API Setting _ Binance.com_files/sensorsdata2.js" type="text/javascript" charset="utf-8"></script>
+<div ng-controller="headCtr" class="ng-scope">
+		
+		<!-- ngIf: showMobileTip -->
+		<!-- 主导航 -->
+		<div class="header">
+			<a href="https://www.binance.com/" class="logo"><img ng-src="/resources/img/logo-en.svg" src="./API Setting _ Binance.com_files/logo-en.svg"></a>
+			<!-- ngIf: notChinese --><ul class="mainNav f-fl ng-scope" ng-if="notChinese">
+				<li class="listSwitch">
+					<i id="listSwitch_i" class="iconfont icon-jiugongge-B"></i>
+					<ul class="list">
+						<li><a ng-href="/en/trade/BTC_USDT" href="https://www.binance.com/en/trade/BTC_USDT">
+							<i style="margin-left: 15px;" class="iconfont icon-B"></i>
+							<div class="content_1">
+								<p class="content_1a content_1a_yellow">Exchange</p>
+								<p class="content_1b ng-binding">Blockchain and crypto asset exchange</p>
+							</div>
+						</a></li>	
+						<li><a href="https://www.binance.vision/" target="_blank">
+								<i style="margin-left: 13px;font-size: 25px;" class="iconfont icon-AcademyB"></i>
+								<div class="content_1" style="margin-left: 7px;">
+									<p class="content_1a content_1a_yellow ng-binding">Academy</p>
+									<p class="content_1b ng-binding">Blockchain and crypto education</p>
+								</div>
+							</a></li>
+							<li><a href="https://www.binance.charity/" target="_blank">
+								<i style="margin-left: 15px;" class="iconfont icon-charity-B2"></i>
+								<div class="content_1">
+									<p class="content_1a content_1a_yellow">BCF</p>
+									<p class="content_1b ng-binding">Blockchain charity foundation</p>
+								</div>
+							</a></li>
+							<li><a ng-href="https://info.binance.com/en" target="_blank" href="https://info.binance.com/en">
+								<i style="margin-left: 18px;font-size: 30px;" class="iconfont icon-info-B"></i>
+								<div style="margin-left: -1px;" class="content_1">
+									<p class="content_1a content_1a_yellow ng-binding">Info</p>
+									<p class="content_1b ng-binding">Cryptocurrency information platform</p>
+								</div>
+							</a></li>
+							<li><a target="_blank" href="https://labs.binance.com/">
+								<i style="margin-left: 15px;margin-right: 0px;" class="iconfont icon-labs-B2"></i>
+								<div style="margin-left: 13px;" class="content_1">
+									<p class="content_1a content_1a_yellow">Labs</p>
+									<p class="content_1b ng-binding">Incubator for top blockchain projects</p>
+								</div>
+							</a></li>
+							<li><a href="https://launchpad.binance.com/" target="_blank">
+								<i style="margin-left: 16px;font-size: 24px;line-height: 60px;" class="iconfont icon-launchpad-B"></i>
+								<div class="content_1" style="margin-left: 11px;">
+									<p class="content_1a content_1a_yellow ng-binding">Launch Pad</p>
+									<p class="content_1b ng-binding">Token launch platform</p>
+								</div>
+							</a></li>
+							<li><a href="https://research.binance.com/" target="_blank">
+								<i style="margin-left: 15px;" class="iconfont icon-Research-B"></i>
+								<div class="content_1">
+									<p class="content_1a content_1a_yellow">Research</p>
+									<p class="content_1b ng-binding">Institutional-grade analysis and reports</p>
+								</div>
+							</a></li>
+							
+							<li><a href="https://trustwallet.com/" target="_blank">
+								<i style="margin-left: 15px;color: #3375bb;" class="iconfont icon-trustwallet-B"></i>
+								<div class="content_1">
+									<p class="content_1a content_1a_yellow">Trust Wallet</p>
+									<p class="content_1b ng-binding">Binance’s official crypto wallet</p>
+								</div>
+							</a></li>
+					</ul>
+				</li>
+			</ul><!-- end ngIf: notChinese -->
+			<!-- ngIf: notChinese || (!notChinese && curPage!='index') --><ul class="main-nav exchange ng-scope" ng-if="notChinese || (!notChinese &amp;&amp; curPage!=&#39;index&#39;)">
+				<li>
+					<a href="javascript:;" class="ng-binding">Exchange</a>
+					<ul class="subNav">
+						<li><a ng-href="/en/trade/BTC_USDT" style="padding: 0 16px;" class="ng-binding" href="https://www.binance.com/en/trade/BTC_USDT">Basic</a></li>
+						<li><a ng-href="/en/trade/pro/BTC_USDT" style="padding: 0 16px;" class="ng-binding" href="https://www.binance.com/en/trade/pro/BTC_USDT">Advanced</a></li>
+					</ul>
+				</li>
+			</ul><!-- end ngIf: notChinese || (!notChinese && curPage!='index') -->
+			
+			
+			
+				<div class="googleFY f-fr" ng-click="showGoogleFY=!showGoogleFY" ng-show="initLang!=&#39;cn&#39;">
+					<img src="./API Setting _ Binance.com_files/googleFY.png">
+					<div class="googleFY-language">
+						<h3 class="ng-binding">Website Translator</h3>
+						<div id="google_translate_element"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="./API Setting _ Binance.com_files/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="goog-te-menu-value" href="javascript:void(0)"><span>Select Language</span><img src="./API Setting _ Binance.com_files/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="./API Setting _ Binance.com_files/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div>
+						<p>Translations by Google is provided for 
+							convenience and is not verified contextually.<br>
+							Please refer to original for accuracy.
+						</p>
+					</div>
+				</div>
+				
+				<div class="f-fr">
+					<div class="languages" id="languagesSpanI" ng-mouseover="showFlags=true;" ng-mouseout="showFlags=false;">
+						<!-- ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><span ng-repeat="l in langs" class="font-lang ng-binding ng-scope" ng-if="cur_lang==l.code"><i class="iconfont icon-diqiu"></i>English</span><!-- end ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs --><!-- ngIf: cur_lang==l.code --><!-- end ngRepeat: l in langs -->
+						
+						<ul ng-show="showFlags" class="ng-hide">
+							<!-- ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code --><i ng-if="cur_lang==l.code" class="iconfont icon-gou duigou ng-scope"></i><!-- end ngIf: cur_lang==l.code -->English</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->简体中文</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->繁體中文</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->한국어</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Русский</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Español</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Français</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Deutsch</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Tiếng Việt</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Türkçe</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Nederlands</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Português</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Italiano</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Polski</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs --><!-- ngIf: l.isUsed --><li ng-repeat="l in langs" ng-click="switching(l.code)" ng-if="l.isUsed" class="ng-binding ng-scope"><!-- ngIf: cur_lang==l.code -->Indonesian</li><!-- end ngIf: l.isUsed --><!-- end ngRepeat: l in langs -->
+						</ul>
+					</div>
+				</div>
+				
+				<!-- ngIf: Islogin --><div class="logined f-fr ng-scope" ng-if="Islogin" ng-mouseenter="getTotalAsset()">
+					<i class="iconfont icon-touxiang"></i>
+					<ul>
+						<li>
+							<a class="link" href="https://www.binance.com/userCenter/myAccount.html">
+								<strong class="ng-binding">Account</strong><br>
+								<span class="ng-binding">teletong26@gmail.com</span>
+								<i class="iconfont icon-right"></i>
+							</a>
+						</li>
+						<li>
+							<a class="link" href="https://www.binance.com/userCenter/balances.html">
+								<strong class="ng-binding">Estimated Value: </strong><br>
+								<span class="ng-binding"> BTC</span>
+							</a>
+						</li>
+            <!-- ngIf: user.isParentUser -->
+						<li>
+							<a class="link" href="javascript:;" ng-click="logout()">
+								<span class="loginLogut ng-binding">Logout</span>
+							</a>
+						</li>
+					</ul>
+				</div><!-- end ngIf: Islogin -->
+				
+				<!-- ngIf: !Islogin -->
+				
+				<ul class="main-nav">
+					<!-- ngIf: Islogin --><li ng-if="Islogin" class="ng-scope">
+						<a href="javascript:;" ng-class="{true:&#39;cur&#39;,false:&#39;&#39;}[curPage==&#39;funds&#39;]" class="ng-binding">Funds</a>
+						
+						<ul class="subNav">
+							<li><a href="https://www.binance.com/userCenter/balances.html" class="ng-binding">Balances</a></li>
+							<!-- ngIf: !user.isSubUser --><li ng-if="!user.isSubUser" class="ng-scope"><a href="https://www.binance.com/userCenter/deposit.html" class="ng-binding">Deposits</a></li><!-- end ngIf: !user.isSubUser -->
+							<!-- ngIf: !user.isSubUser --><li ng-if="!user.isSubUser" class="ng-scope"><a href="https://www.binance.com/userCenter/withdrawal.html" class="ng-binding">Withdrawals</a></li><!-- end ngIf: !user.isSubUser -->
+							<!-- ngIf: !user.isSubUser --><li ng-if="!user.isSubUser" class="ng-scope"><a href="https://www.binance.com/userCenter/moneyLog.html" class="ng-binding">Transaction History</a></li><!-- end ngIf: !user.isSubUser -->
+							<!-- ngIf: !user.isSubUser --><li ng-if="!user.isSubUser" class="ng-scope"><a href="https://www.binance.com/en/creditcard?source=SX_ClickEntrance_Header" class="ng-binding">Buy with Credit Card</a></li><!-- end ngIf: !user.isSubUser -->
+							<!-- <li><a href="/userCenter/depositWithdraw.html">{{"czth"| T}}</a></li>
+							<li><a href="/userCenter/transactionHistory.html">{{"History" | T}}</a></li> -->
+						</ul>
+					</li><!-- end ngIf: Islogin -->
+					<!-- ngIf: Islogin --><li ng-if="Islogin" class="ng-scope">
+						<a href="javascript:;" ng-class="{true:&#39;cur&#39;,false:&#39;&#39;}[curPage==&#39;orders&#39;]" class="ng-binding">Orders</a>
+						<ul class="subNav">
+							<li><a href="https://www.binance.com/userCenter/openOrders.html" class="ng-binding">Open Orders</a></li>
+							<li><a href="https://www.binance.com/userCenter/orderHistory.html" class="ng-binding">Order History</a></li>
+							<li><a href="https://www.binance.com/userCenter/tradeHistory.html" class="ng-binding">Trade History</a></li>							
+						</ul>
+					</li><!-- end ngIf: Islogin -->
+					<li><a ng-href="/Careers.html" target="_blank" class="ng-binding" href="https://www.binance.com/Careers.html">Join Us</a></li>
+					<li><a href="https://www.binance.com/zendesk/login.html?return_to=https://support.binance.com/hc/en-us" target="_blank" class="ng-binding">Support</a></li>
+					<li><a href="https://www.binance.com/zendesk/login.html?return_to=https://support.binance.com/hc/en-us/categories/115000056351" target="_blank" class="ng-binding">News</a></li>
+				</ul>
+		</div>
+		<div class="top-news-box" style="display:none;">
+			<div class="top-news-cont">
+				<div class="top-news-left">
+					<span id="top-news-title"></span><a id="top-news-link" href="https://www.binance.com/userCenter/createApi.html?id=da9c18708d6e4f5fadd7ee48219c3750#" target="_blank" class="ng-binding">More</a>
+				</div>
+				<span class="iconfont icon-delete"></span>
+			</div>
+		</div>
+</div>
+
+<script>
+  $(function() {
+    $(".googleFY").on("click", function(e) {
+      e.stopPropagation();
+      $(this)
+        .find("div")
+        .show();
+      $(document)
+        .not(this)
+        .on("click", function() {
+          $(".googleFY>div").hide();
+        });
+    });
+
+    $(".top-news-box .iconfont").click(function() {
+      $(this)
+        .parents(".top-news-box")
+        .slideUp(200);
+    });
+  });
+</script>
+
+    <!-- 主体内容 -->
+    <div>   
+
+<style>
+  body {
+    background: #f7f7f7;
+  }
+  .apiBox {
+    width: 100%;
+    min-width: 1200px;
+  }
+  .createApiBox {
+    box-sizing: border-box;
+    width: 500px;
+    padding: 68px 30px;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: -32px;
+    color: #666;
+  }
+  .verify {
+    padding: 30px 0;
+    width: 306px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .verify-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  .verify .Validform_checktip {
+    height: 20px;
+    line-height: 20px;
+  }
+  .verify .ipt {
+    width: 284px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    border: 1px solid #d4d4d4;
+  }
+  .verify .ipt[readonly] {
+    background: #f3f3f3;
+    color: #999;
+  }
+  .verify .label {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.8;
+  }
+  .verify .btns {
+    margin-bottom: 14px;
+    width: 100%;
+  }
+  .verify .btn {
+    padding: 0 12px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+  }
+  .verify .btns .btn {
+    padding: 0;
+    width: 154px;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-left: -1px;
+    vertical-align: middle;
+  }
+  .verify .btn.btn-grey {
+    background: #f5f5f5;
+    width: 94px;
+    padding: 0;
+  }
+  .verify .btn.btn-grey.btn-disabled {
+    background: #f5f5f5 !important;
+    border-color: #d4d4d4 !important;
+    color: #333;
+  }
+  .verify .btns .btn.cur {
+    background: #e8b342;
+    color: #fff;
+  }
+
+  .createApiBox h3 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: normal;
+  }
+  .createApiBox .btn {
+    padding: 12px;
+  }
+  .createApiBox p {
+    font-size: 16px;
+    margin: 36px 0;
+  }
+  .apiLists {
+    background: #fff;
+  }
+  .apiLists .panel .panel-body {
+    padding: 12px;
+  }
+  .apiLists-hd {
+    text-align: center;
+    padding: 25px 0;
+    background: url(/resources/img/apiBg.jpg) no-repeat center;
+    border-bottom: 1px solid #eee;
+  }
+  .apiLists-bd {
+    width: 960px;
+    margin: 0 auto;
+    padding: 72px 0 36px;
+    position: relative;
+  }
+  .apiLists-hd h3 {
+    font-size: 24px;
+    color: #fffefe;
+    font-weight: normal;
+    line-height: 100%;
+  }
+  .apiLists-hd p {
+    font-size: 14px;
+    color: #c9c9c9;
+    margin: 24px 0 18px 0;
+  }
+  .apiLists-hd .btn {
+    background: #fff;
+  }
+  .apiLists .panel-title {
+    height: auto;
+    padding: 8px 15px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #333;
+  }
+  .apiLists .panel-title .edit {
+    font-size: 12px;
+    color: #333;
+    text-decoration: underline;
+  }
+  .apiLists .panel-title .editInput input[type="text"] {
+    width: 138px;
+    padding: 0 10px;
+    height: 22px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .apiLists .panel-title .editInput a {
+    font-size: 12px;
+    color: #e8b342;
+    text-decoration: underline;
+  }
+  .apiLists .info {
+    color: #ff0000;
+  }
+  .apiLists .show {
+    color: #333;
+    text-decoration: underline;
+  }
+  table.apiInfo th,
+  table.apiInfo td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  table.apiInfo th {
+    color: #999;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+  table.apiInfo td {
+    color: #333;
+    line-height: 1.5;
+  }
+  table.apiInfo td .select-input {
+    margin-bottom: 6px;
+  }
+  table.apiInfo td .trusted > label {
+    color: #999;
+  }
+  table.apiInfo td .trusted > a {
+    color: #333;
+    text-decoration: underline;
+  }
+  .trusted-input input[type="text"] {
+    width: 314px;
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid #e6e6e6;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .trusted-input a {
+    color: #e8b342;
+    text-decoration: underline;
+  }
+  .trusted-input p {
+    color: #666;
+  }
+  .addApi input[type="text"] {
+    width: 200px;
+    height: 38px;
+    background: #3a3a3a;
+    border: 1px solid #525252;
+    padding: 0 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #fff;
+  }
+  .apiLists-hd .addApi input[type="text"] {
+    background: #3a3a3a;
+    border: 1px solid #525252;
+    color: #7c7c7c;
+  }
+  .addApi input[type="button"] {
+    padding: 12px;
+    vertical-align: middle;
+  }
+  .deleteall {
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 28px;
+  }
+  .deleteall a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .keySecret {
+    overflow: hidden;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .keySecret .ewm {
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+  }
+  .apiParams li {
+    margin-bottom: 13px;
+  }
+  .apiParams li label {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    margin: 5px 0;
+  }
+  .apiParams li label:last-of-type {
+    margin-right: 0 !important;
+  }
+  .apiParams li > div {
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+  }
+  .ipLimit {
+    padding-top: 12px;
+    overflow: hidden;
+  }
+  .ipLimit .label {
+    font-size: 12px;
+    color: #999;
+    padding: 0 10px;
+  }
+  .ipLimit label {
+    font-size: 12px;
+    color: #333;
+    margin-right: 35px;
+  }
+  .ipLimit label.disable {
+    color: #cdcdcd;
+  }
+  .ipLimit input[type="radio"] {
+    vertical-align: text-top;
+    margin-right: 3px;
+  }
+  .ipLimit .info {
+    font-size: 12px;
+    color: #ff0000;
+    margin-top: 12px;
+  }
+  .ipLimit .curIp,
+  .ipLimit .trusted label,
+  .ipLimit .trusted p {
+    display: block;
+    font-size: 12px;
+    color: #333;
+    margin-top: 9px;
+  }
+  .ipLimit .trusted input {
+    width: 495px;
+    margin-top: -5px;
+  }
+  .ipLimit .trusted p {
+    color: #666;
+    margin-top: 6px;
+  }
+  .addApi input[type="text"] {
+    background: #fff;
+    border-color: #d4d4d4;
+    color: #333;
+  }
+  .withdrawTip {
+    display: inline-block;
+    position: relative;
+    color: #b48728;
+    cursor: pointer;
+    vertical-align: text-bottom;
+  }
+  .withdrawTip p {
+    background: #fdf7ec;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.2;
+    position: absolute;
+    left: 50%;
+    top: -4px;
+    width: 400px;
+    max-width: 400px;
+    padding: 5px;
+    opacity: 0;
+    z-index: -1;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translate(-50%, -100%);
+    -moz-transform: translate(-50%, -100%);
+    -o-transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    word-break: break-word;
+  }
+  .withdrawTip p:after {
+    content: " ";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: #fdf7ec;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    margin-left: -6px;
+  }
+  .withdrawTip:hover p {
+    opacity: 1;
+    z-index: 9;
+  }
+  .votedItems {
+    padding: 22px 0px 22px 29px !important;
+  }
+  .votedItems .tips {
+    color: #666;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .votedItems .tips .iconfont {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin: 0;
+    position: absolute;
+    left: -35px;
+    top: -4px;
+  }
+  .votedItems .items {
+    padding-left: 16px;
+  }
+  .votedItems .items li {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+    list-style: disc;
+  }
+  .votedItems + div .btn {
+    margin: 0 0 20px;
+  }
+  .votedItems + div .btn.btn-block {
+    width: 30%;
+    background: #fff;
+    color: #333;
+  }
+  .tradeIpP {
+    display: none;
+    font-size: 12px;
+    font-weight: normal;
+    color: #ff0000;
+  }
+</style>
+<div class="apiBox ng-scope" ng-controller="apiController">
+  <!-- ngIf: !apiLength -->
+
+  <!-- ngIf: apiLength --><div class="apiLists ng-scope" ng-if="apiLength">
+    <div class="apiLists-hd">
+      <h3>API</h3>
+      <p class="ng-binding">You must apply the IP Access Restriction filter in order to enable withdrawals.</p>
+      <div>
+        <label class="addApi"><input type="text" placeholder="Enter API key label"><input type="button" value="Create new key" class="btn btn-orange" ng-click="addApi($event,&#39;/manageApi/saveApi.html&#39;)"></label>
+      </div>
+    </div>
+    <div class="apiLists-bd">
+      <!-- ngIf: APIs.length --><div class="deleteall ng-scope" ng-if="APIs.length">
+        <a href="javascript:;" ng-click="deleteAllAPIKey()" class="ng-binding">Delete all API</a>
+      </div><!-- end ngIf: APIs.length -->
+      <!-- ngRepeat: API in APIs --><div class="panel ng-scope" ng-repeat="API in APIs" ng-hide="!API.apiEmailVerify" repeat-finish="renderFinish()">
+        <div class="panel-title f-cb ng-binding" ng-init="editAble=false">
+          <span class="btn f-fr ng-binding" ng-click="deleteAPIKey(API.id,API.apiKey)">Delete</span>
+          <span ng-show="!editAble" class="btn f-fr ng-binding" ng-click="editAble=!editAble" style="margin-right:6px;">Edit</span>
+          <span ng-show="editAble" class="btn btn-orange f-fr ng-binding ng-hide" ng-click="editAble=!editAble;edit($event,&#39;/manageApi/updateApi.html&#39;,API)" style="margin-right:6px;">Save</span>
+          SA
+        </div>
+        <div class="panel-body">
+          <div class="keySecret">
+            <div class="f-fl ewm">
+              <img src="./API Setting _ Binance.com_files/hideEwm.jpg" ng-show="API.secretKey==&#39;--&#39;" class="ng-hide">
+              <div id="ewm_5954469"><canvas width="130" height="130"></canvas></div>
+            </div>
+            <div class="f-fl">
+              <ul class="apiParams">
+                <li>
+                  <label class="ng-binding">API Key: </label>
+                  <div class="ng-binding">NCluwdkB0aM4qO5XsSWsVHE3WZ22QJXrnybse9EfsW3hdAdi3VqZRMaC2CCTmV1D</div>
+                </li>
+                <li>
+                  <label class="ng-binding">Secret Key: </label>
+                  <div class="iconfont icon-warn withdrawTip" style="font-size: 16px;color:#b48728;">
+                    <p style="color:#b48728; " class="ng-binding">
+                      For your security, your API Secret Key will only be displayed at the time it is created. If you lose this key, you will need to delete your API and set up a new one.
+                    </p>
+                  </div>
+                  <div>
+                    <!-- ngIf: API.secretKey=='--' -->
+                    <!-- ngIf: API.secretKey!='--' --><span ng-if="API.secretKey!=&#39;--&#39;" class="ng-binding ng-scope">iPkwtKkfq7iCwCnJFwYyLau5xwCF92P3cnQBNbPZ2z13CHfl6alJFO3mDeAr7Zun</span><!-- end ngIf: API.secretKey!='--' -->
+                    <!-- ngIf: API.secretKey!='--' --><p ng-if="API.secretKey!=&#39;--&#39;" style="color:#ff0000;font-size:12px;margin-top:12px;" class="ng-scope">
+                      <i class="iconfont icon-warn"></i>
+                      <!-- ngIf: cur_lang!='cn' && cur_lang!='tw' --><span ng-if="cur_lang!=&#39;cn&#39; &amp;&amp; cur_lang!=&#39;tw&#39;" class="ng-scope">Store your Secret Key somewhere safe. It will not be
+                        shown again.</span><!-- end ngIf: cur_lang!='cn' && cur_lang!='tw' -->
+                      <!-- ngIf: cur_lang=='cn' -->
+                      <!-- ngIf: cur_lang=='tw' -->
+                    </p><!-- end ngIf: API.secretKey!='--' -->
+                    <!-- <a href="javascript:;" class="show" ng-click="getAPIById(API.id,'/manageApi/getApiById.html')" ng-hide="API.secretKey!='--'">{{"show" | T}}</a> -->
+                  </div>
+                </li>
+                <li>
+                  <label class="ng-binding">Option: </label>
+                  <div class="rules">
+                    <label class="checkbox ng-binding"><input type="checkbox" name="readInfo" value="0" checked="true" disabled=""><span></span>Read Info</label>
+                    <label class="checkbox ng-binding"><input type="checkbox" name="enableTrading" value="1" ng-model="API.enableTrading" ng-checked="API.enableTrading" ng-disabled="!editAble" class="ng-pristine ng-valid" disabled="disabled" checked="checked"><span></span>Enable Trading</label>
+                    <label class="checkbox ng-binding" style="    margin-right: 5px!important;"><input type="checkbox" id="opentx" name="enableWithdrawals" value="2" ng-model="API.enableWithdrawals" ng-disabled="!editAble" ng-change="changeWithdrawal(API.enableWithdrawals,API.status)" class="ng-pristine ng-valid" disabled="disabled"><span></span>Enable Withdrawals</label>
+
+                    <div class="iconfont icon-warn withdrawTip">
+                      <p class="ng-binding">This option authorizes this key to withdraw funds from your accout instantly and without email validation or two-factor anthentication. Enable this only if you require it,and it is strongly recommended that you do so only after enabling  two-factor anthentication and applying the IP Assess Restriction filter below.</p>
+                    </div>
+                    <!-- ngIf: user.isParentUser -->
+
+                    <!-- ngIf: user.isParentUser -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ipLimit">
+            <div class="f-fl label ng-binding">IP Access Restriction:</div>
+            <div class="f-fl">
+              <label ng-class="{true:&#39;disable&#39;,false:&#39;&#39;}[!editAble&amp;&amp;API.status!=2]" class="ng-binding disable"><input name="status_5954469" type="radio" value="2" ng-model="API.status" ng-checked="API.status==2" ng-disabled="!editAble&amp;&amp;API.status!=2" class="ng-pristine ng-valid" disabled="disabled">Restrict access to trusted IPs only (Recommended)</label>
+              <label ng-class="{true:&#39;disable&#39;,false:&#39;&#39;}[!editAble&amp;&amp;API.status!=1]" class="ng-binding"><input name="status_5954469" type="radio" value="1" ng-model="API.status" ng-checked="API.status==1" ng-disabled="!editAble&amp;&amp;API.status!=1" class="ng-pristine ng-valid" checked="checked">Unrestricted (Less Secure)</label>
+              <div ng-show="API.status==2" class="ng-hide">
+                <div class="curIp ng-binding">
+                  Your current IP is 125.161.130.88
+                </div>
+                <div class="trusted">
+                  <label class="ng-binding">Trusted IPs:</label>
+                  <div class="trusted-input">
+                    <label><input type="text" ng-model="API.tradeIp" name="tradeIp" class="ng-pristine ng-valid"></label>
+                    <h6 class="tradeIpP ng-binding">
+                      Please enter trusted IP addresses only.
+                    </h6>
+                    <p class="ng-binding">
+                      If entering multiple IPs, separate using commas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div ng-show="API.status==1" class="">
+                <p class="info ng-binding">
+                  Any IP address can use this API key to access your account. This is not recommended.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end ngRepeat: API in APIs -->
+    </div>
+  </div><!-- end ngIf: apiLength -->
+  <!-- 二次验证 -->
+  <div class="verify" id="verify" style="display:none;">
+    <!-- 谷歌二次验证 -->
+    <!-- ngIf: user.gauth && !user.mobileSecurity -->
+
+    <!-- 手机二次验证 -->
+    <!-- ngIf: !user.gauth && user.mobileSecurity --><form class="verify-form ng-scope ng-pristine ng-valid" action="https://www.binance.com/userCenter/createApi.html?id=da9c18708d6e4f5fadd7ee48219c3750" method="post" id="mobile-form" ng-if="!user.gauth &amp;&amp; user.mobileSecurity">
+      <div class="verify-title ng-binding">SMS Authentication Code</div>
+      <input type="hidden" name="id" id="APIId">
+      <input type="hidden" name="ip" id="APIIp">
+      <input type="hidden" name="status" id="status">
+      <input type="hidden" name="apiName" id="APIName">
+      <input type="hidden" name="ruleId" id="ruleId">
+      <input type="hidden" name="operationType" id="operationType" value="mobile">
+      <input type="hidden" name="device_info" id="deviceInfo">
+      <div class="filed">
+        <input type="text" name="mobile" readonly="" class="ipt ng-pristine ng-valid" ng-model="user.mobileNo">
+        <p class="Validform_checktip f-nomargin"></p>
+      </div>
+      <div class="filed">
+        <input style="width:183px;" type="text" id="verifyCode" name="verifyCode" class="ipt" datatype="*" nullmsg="This field is required." ng-keyup="autoSubmit($event)">
+        <span id="sendBtn" class="btn btn-grey ng-binding" ng-click="send(user.mobileNo)">Send SMS</span>
+        <p class="Validform_checktip f-nomargin f-left"></p>
+      </div>
+      <div class="filed">
+        <input type="submit" value="Submit" class="btn btn-orange btn-block" id="mobile-btn">
+      </div>
+    </form><!-- end ngIf: !user.gauth && user.mobileSecurity -->
+
+    <!-- 谷歌或手机二次验证 -->
+    <!-- ngIf: user.gauth && user.mobileSecurity -->
+  </div>
+
+  <div id="votedItems" style="display:none;">
+    <div class="votedItems">
+      <!-- ngIf: cur_lang=='cn' -->
+      <!-- ngIf: cur_lang=='tw' -->
+      <!-- ngIf: cur_lang!='cn' && cur_lang!='tw' --><p class="tips ng-scope" ng-if="cur_lang!=&#39;cn&#39; &amp;&amp; cur_lang!=&#39;tw&#39;">
+        <i class="iconfont layui-layer-ico layui-layer-ico1"></i>API key created
+      </p><!-- end ngIf: cur_lang!='cn' && cur_lang!='tw' -->
+    </div>
+    <div class="f-center">
+      <!-- ngIf: cur_lang!='cn' && cur_lang!='tw' --><span class="btn btn-block ng-scope" onclick="layer.closeAll()" ng-if="cur_lang!=&#39;cn&#39; &amp;&amp; cur_lang!=&#39;tw&#39;">Close</span><!-- end ngIf: cur_lang!='cn' && cur_lang!='tw' -->
+      <!-- ngIf: cur_lang=='cn' -->
+      <!-- ngIf: cur_lang=='tw' -->
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="./API Setting _ Binance.com_files/Validform_v5.3.2_min.js"></script>
+<link rel="stylesheet" type="text/css" href="./API Setting _ Binance.com_files/style.css">
+<script src="./API Setting _ Binance.com_files/jquery.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./API Setting _ Binance.com_files/wfp.umd.js"></script>
+<script src="./API Setting _ Binance.com_files/api.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  $(document).ajaxSend(function(event, jqxhr, settings) {
+    jqxhr.setRequestHeader("clientType", "web");
+    jqxhr.setRequestHeader("lang", localStorage.lang);
+    if ($.cookie("cr00")) {
+      jqxhr.setRequestHeader("cr00", $.md5($.cookie("cr00")));
+      jqxhr.setRequestHeader("csrftoken", $.md5($.cookie("cr00")));
+    }
+    var email = $.cookie("deviceEmail");
+    if (typeof bnbDeviceInfo !== "undefined" && email) {
+      var device_info = bnbDeviceInfo.getInfo(email);
+      if (device_info) {
+        jqxhr.setRequestHeader("device_info", device_info);
+      }
+    }
+  });
+</script>
+</div>
+
+    
+
+
+
+    
+	    <div class="section footer">
+	    	<div class="footerTWrap">
+		    	<div class="container">
+			    	<div class="footerT">
+				    	<div class="footerTL">
+				    		<ul>
+				    			<li><a href="https://www.binance.com/aboutUs.html" target="_blank" class="ng-binding">About</a></li>
+				    			<li><a href="https://www.binance.com/agreement.html" target="_blank" class="ng-binding">Terms</a></li>
+				    			<li><a href="https://www.binance.com/statement.html" target="_blank" class="ng-binding">Privacy</a></li>
+				    			<li><a href="https://www.binance.com/fees.html" target="_blank" class="ng-binding">Fees</a></li>
+				    			<li><a ng-href="/contactUsCn.html" target="_blank" class="ng-binding" href="https://www.binance.com/contactUsCn.html">Contact</a></li>
+				    			<li><a href="https://github.com/binance-exchange/binance-official-api-docs" target="_blank" class="ng-binding">API</a></li>
+				    			<li><a href="https://www.binance.com/userCenter/coinApply.html" target="_blank" class="ng-binding">Apply to List</a></li>
+				    			<!-- <li><a href="/Careers.html">{{"Careers" | T}}</a></li> -->
+				    			<li><a href="https://www.binance.com/clientDownloads.html" target="_blank" class="ng-binding">Download</a></li>
+				    			<li><a href="https://www.binance.com/en/use-bnb" target="_blank" class="ng-binding">BNB</a></li>
+				    			 <li><a href="https://www.binance.com/en/blog" target="_blank" class="ng-binding">Blog</a></li> 
+				    	
+				    		</ul>
+				    	</div>
+			    		<div class="footerTR f-cb">
+				    		<ul class="f-fr f-cb">
+				    			<li title="Telegram"><a href="https://www.binance.com/contactUsCn.html#telegrams" target="_blank"><i class="media media-telegram"></i></a></li>
+				    <!--			<li title="support@binance.zendesk.com"><a href="mailTo:support@binance.zendesk.com"><i class="media media-email"></i></a></li>   -->
+				    			<li><a href="https://www.facebook.com/binanceexchange" title="Facebook" target="_blank"><i class="media media-fb"></i></a></li>
+				    			<li><a href="https://twitter.com/binance" title="Twitter" target="_blank"><i class="media media-tt"></i></a></li>
+				    			<li><a href="https://www.reddit.com/r/binanceexchange" title="Reddit" target="_blank"><i class="media media-rd"></i></a></li>
+				    <!-- 			<li><a href="https://joinslack.binance.com/" target="_blank"><i class="media media-sk"></i></a></li> -->
+				    			<!-- ngIf: cur_lang=='cn' -->
+				    			<li><a href="https://steemit.com/@binanceexchange" title="Steemit" target="_blank"><i class="media media-steemit"></i></a></li>
+				    			<li><a href="https://medium.com/binanceexchange" title="Medium" target="_blank"><i class="media media-medium"></i></a></li>
+				    			<li><a href="https://www.instagram.com/binanceexchange/" title="Instagram" target="_blank"><i class="media media-instagram"></i></a></li>
+								<li><a href="https://coinmarketcap.com/exchanges/binance/" title="coinmarketcap" target="_blank"><i class="media media-coinmarketcap"></i></a></li>
+
+				    		</ul>
+				    	</div>
+			    	</div>
+			    </div>
+			</div>
+	    </div>
+	    <div class="footerB">
+	    	<div class="container">
+		    	<span class="footerBL ng-binding">
+		    		© 2017 - 2020 Binance.com. All rights reserved
+		    	</span>
+		    	<!-- ngIf: curPage=='index' || curPage=='trade' -->
+		   	</div>
+		 </div>
+		 
+		 
+		 
+		 <script>
+		 /*  function showTelegram(){
+		 	layer.open({
+		 	  type:1,
+		 	  title:null,
+		 	  area:['745px','450px'],
+		 	  content:$('#telegram')
+		 	})
+		  } */
+		 </script>
+
+    <script>
+      function googleTranslateElementInit(lang) {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: lang,
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          },
+          "google_translate_element"
+        );
+      }
+      if (initLang != "cn") {
+        setTimeout(function() {
+          document.getElementById("pageLoading").style.display = "none";
+        }, 3000);
+        var script = document.createElement("script");
+        script.src =
+          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.body.appendChild(script);
+        script.onload = function() {
+          googleTranslateElementInit(initLang);
+        };
+      }
+    </script><script src="./API Setting _ Binance.com_files/f.txt"></script>
+  <!-- <script src="/resources/js/chat/widget.js"></script> -->
+  <script src="./API Setting _ Binance.com_files/ChatWidget.js"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./API Setting _ Binance.com_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+  
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 1054px; height: 263px; display: none;" src="./API Setting _ Binance.com_files/saved_resource.html"></iframe><div id="chatWidget" class="chatWidget"><div class="sc-iRbamj ewkWup"><div class=" false sc-jlyJG gxDXAq"><div class="false false sc-bdVaJa gBribX"><div class="sc-bwzfXH jPCYsb"><svg width="160" height="134" viewBox="0 0 160 134" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.16297"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.8792 23.1113L79.9755 -26L129.153 23.1931L111.1 41.2523L79.9755 10.1185L48.9329 41.2523L30.8792 23.1113ZM18.0807 35.8664L0 53.9526L18.0807 72.038L36.1605 53.9526L18.0807 35.8664ZM79.9755 97.8815L48.9329 66.7477L30.7975 84.8069L79.9755 134L129.153 84.8069L111.1 66.7477L79.9755 97.8815ZM141.92 35.8688L123.84 53.9551L141.92 72.0405L160 53.9551L141.92 35.8688Z" fill="white"></path><path d="M80.4588 35L62 53.5L80.4588 72L99 53.5L80.4588 35Z" fill="white"></path></g></svg></div><div class="false sc-htpNat kyMUwO"><div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.61208 7.33296L11.945 0L19.2902 7.34516L16.5937 10.0416L11.945 5.39296L7.30855 10.0416L4.61208 7.33296ZM2.7005 9.23745L0 11.938L2.7005 14.6383L5.40089 11.938L2.7005 9.23745ZM11.945 18.4971L7.30855 13.8484L4.59987 16.5449L11.945 23.8901L19.2902 16.5449L16.5937 13.8484L11.945 18.4971ZM21.197 9.23782L18.4966 11.9383L21.197 14.6387L23.8974 11.9383L21.197 9.23782Z" fill="#212833"></path><path d="M11.945 9.19971L9.21191 11.945L11.945 14.6903L14.6903 11.945L11.945 9.19971Z" fill="#212833"></path></svg></div><div class="info-title"><h3>Welcome!</h3><p></p></div></div><div class="false sc-bxivhb dHGIpe"><div class="info-btn "><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.01" width="16" height="16" fill="black"></rect><path d="M3.002 7H12.997C13.551 7 14 7.444 14 8C14 8.553 13.544 9 12.997 9H3.002C2.449 9 2 8.556 2 8C2 7.447 2.456 7 3.002 7Z" fill="#212833"></path></svg></div></div></div><div class="false false sc-cvbbAY jhrGPk"><div class="sc-jWBwVP fPsmiO"><div class=" false sc-ifAKCX iXpLwi"><div class="sc-EHOje iyOeVU"></div><button>Click to reconnect</button></div><div class="sc-brqgnP jCwDfZ" style="height: 100%;"><div class="sc-kpOJdX cEHyCu"><div><div><div class="sc-cSHVUG kVBIQI"><div class="sc-kAzzGY dqwmms"><div class="sc-kgoBCf bBLNiA">Email</div><input type="text" value=""></div><div class="sc-kAzzGY dqwmms"><div class="sc-kgoBCf bBLNiA">Choose language</div><select><option value="cn">简体中文</option><option value="en">English</option><option value="ru">Русский</option><option value="es">Español</option></select></div><div class="sc-kAzzGY dqwmms"><div class="sc-kgoBCf bBLNiA">Choose a question type</div><select><option value=""></option><option value="2147578811">Deposit Issue</option><option value="2147578813">Withdrawal Issue</option><option value="2147578815">Email Issue</option><option value="2147578817">App Issue</option><option value="2147578819">Login Issue</option><option value="2147578821">Google 2FA Issue</option><option value="2147578823">SMS 2FA Issue</option><option value="2147578825">Account Issue</option><option value="2147578827">Trading Issue</option><option value="2147578829">Margin trading</option><option value="2147578831">OTC trading</option><option value="2147578833">Security Issue</option><option value="2147578835">Launchpad</option><option value="2147578837">Promotion Issue</option><option value="2147578839">Mainnet Swap</option><option value="2147578841">API Issue</option><option value="2147578843">Fees&amp;Service description</option><option value="2147587671">Futures Issue</option></select></div><div class="sc-kAzzGY dvcYTE"><button type="button">Start Chat</button></div><div class="sc-kGXeez kUtlCJ"> </div></div></div></div></div></div><div class="sc-cMljjf cKnEPv" style="height: 0px;"></div></div></div></div><div class="sc-gPEVay gwgUyQ" id="chatButton" style="right: 0px; bottom: 0px;"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M13 22l-4-6H2c-1.11-.043-2-.935-2-2V2C0 .89.89 0 2 0h18c1.11 0 2 .892 2 2v12c0 1.067-.89 1.957-2 2h-3l-4 6zm3-8h4c-.005.3-.01-12 0-12-.01.004-18 .006-18 0 .005.006 0 12 0 12h8l3 5 3-5z" fill="#FFF" fill-rule="evenodd"></path></svg><div class="chat-new-message-tip hide-chat-new-msg-tip">0</div></div></div></div></body></html>
